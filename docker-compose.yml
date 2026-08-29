@@ -1,0 +1,7 @@
+services:
+  extractor:
+    build: .
+    ports:
+      - "7860:7860"
+    environment:
+      - SILICONFLOW_API_KEY=${SILICONFLOW_API_KEY}

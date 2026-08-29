@@ -1,0 +1,262 @@
+[
+  {
+    "file": "contract_01.txt",
+    "label": {
+      "contract_type": "房屋租赁合同",
+      "party_a": "王芳",
+      "party_b": "李明",
+      "amount": "3000元/月",
+      "term_start": "2026-04-01",
+      "term_end": "2027-04-28",
+      "penalty": "逾期支付租金超过十日的，每日按月租金的百分之一支付违约金",
+      "dispute_resolution": "协商不成的，向合同签订地人民法院提起诉讼"
+    }
+  },
+  {
+    "file": "contract_02.txt",
+    "label": {
+      "contract_type": "商品买卖合同",
+      "party_a": "远大实业集团",
+      "party_b": "启明软件有限公司",
+      "amount": "30000元",
+      "term_start": "2026-01-10",
+      "term_end": "2026-02-20",
+      "penalty": "延迟交付的，每延迟一日按合同总价的千分之三支付违约金",
+      "dispute_resolution": "协商不成的，向合同签订地人民法院提起诉讼"
+    }
+  },
+  {
+    "file": "contract_03.txt",
+    "label": {
+      "contract_type": "技术服务合同",
+      "party_a": "恒信咨询有限公司",
+      "party_b": "星辰科技有限公司",
+      "amount": "760000元",
+      "term_start": "2026-04-01",
+      "term_end": "2027-12-28",
+      "penalty": "任一方违约的，应向守约方支付合同总额百分之十的违约金",
+      "dispute_resolution": "协商不成的，提交北京仲裁委员会仲裁"
+    }
+  },
+  {
+    "file": "contract_04.txt",
+    "label": {
+      "contract_type": "劳动合同",
+      "party_a": "恒信咨询有限公司",
+      "party_b": "周杰",
+      "amount": "24000元/月",
+      "term_start": "2026-05-01",
+      "term_end": "2028-01-28",
+      "penalty": "乙方违反服务期约定的，应支付违约金10000元",
+      "dispute_resolution": "协商不成的，提交北京仲裁委员会仲裁"
+    }
+  },
+  {
+    "file": "contract_05.txt",
+    "label": {
+      "contract_type": "房屋租赁合同",
+      "party_a": "赵磊",
+      "party_b": "陈静",
+      "amount": "2000元/月",
+      "term_start": "2026-04-01",
+      "term_end": "2027-06-28",
+      "penalty": "逾期支付租金超过十日的，每日按月租金的百分之一支付违约金",
+      "dispute_resolution": "协商不成的，向合同签订地人民法院提起诉讼"
+    }
+  },
+  {
+    "file": "contract_06.txt",
+    "label": {
+      "contract_type": "商品买卖合同",
+      "party_a": "远大实业集团",
+      "party_b": "启明软件有限公司",
+      "amount": "70000元",
+      "term_start": "2026-06-10",
+      "term_end": "2026-06-20",
+      "penalty": "延迟交付的，每延迟一日按合同总价的千分之三支付违约金",
+      "dispute_resolution": "协商不成的，提交北京仲裁委员会仲裁"
+    }
+  },
+  {
+    "file": "contract_07.txt",
+    "label": {
+      "contract_type": "技术服务合同",
+      "party_a": "星辰科技有限公司",
+      "party_b": "华信物流有限公司",
+      "amount": "730000元",
+      "term_start": "2026-02-01",
+      "term_end": "2027-07-28",
+      "penalty": "任一方违约的，应向守约方支付合同总额百分之十的违约金",
+      "dispute_resolution": "协商不成的，向合同签订地人民法院提起诉讼"
+    }
+  },
+  {
+    "file": "contract_08.txt",
+    "label": {
+      "contract_type": "劳动合同",
+      "party_a": "天成建设有限公司",
+      "party_b": "刘洋",
+      "amount": "8000元/月",
+      "term_start": "2026-01-01",
+      "term_end": "2028-11-28",
+      "penalty": "乙方违反服务期约定的，应支付违约金10000元",
+      "dispute_resolution": "协商不成的，提交北京仲裁委员会仲裁"
+    }
+  },
+  {
+    "file": "contract_09.txt",
+    "label": {
+      "contract_type": "房屋租赁合同",
+      "party_a": "王芳",
+      "party_b": "刘洋",
+      "amount": "1500元/月",
+      "term_start": "2026-07-01",
+      "term_end": "2027-05-28",
+      "penalty": "逾期支付租金超过十日的，每日按月租金的百分之一支付违约金",
+      "dispute_resolution": "协商不成的，提交北京仲裁委员会仲裁"
+    }
+  },
+  {
+    "file": "contract_10.txt",
+    "label": {
+      "contract_type": "商品买卖合同",
+      "party_a": "天成建设有限公司",
+      "party_b": "蓝海贸易有限公司",
+      "amount": "240000元",
+      "term_start": "2026-06-10",
+      "term_end": "2026-04-20",
+      "penalty": "延迟交付的，每延迟一日按合同总价的千分之三支付违约金",
+      "dispute_resolution": "协商不成的，提交北京仲裁委员会仲裁"
+    }
+  },
+  {
+    "file": "contract_11.txt",
+    "label": {
+      "contract_type": "技术服务合同",
+      "party_a": "远大实业集团",
+      "party_b": "蓝海贸易有限公司",
+      "amount": "730000元",
+      "term_start": "2026-12-01",
+      "term_end": "2027-04-28",
+      "penalty": "任一方违约的，应向守约方支付合同总额百分之十的违约金",
+      "dispute_resolution": "协商不成的，向合同签订地人民法院提起诉讼"
+    }
+  },
+  {
+    "file": "contract_12.txt",
+    "label": {
+      "contract_type": "劳动合同",
+      "party_a": "华信物流有限公司",
+      "party_b": "孙婷",
+      "amount": "14000元/月",
+      "term_start": "2026-11-01",
+      "term_end": "2028-12-28",
+      "penalty": "乙方违反服务期约定的，应支付违约金25000元",
+      "dispute_resolution": "协商不成的，向合同签订地人民法院提起诉讼"
+    }
+  },
+  {
+    "file": "contract_13.txt",
+    "label": {
+      "contract_type": "房屋租赁合同",
+      "party_a": "赵磊",
+      "party_b": "李明",
+      "amount": "2500元/月",
+      "term_start": "2026-01-01",
+      "term_end": "2027-06-28",
+      "penalty": "逾期支付租金超过十日的，每日按月租金的百分之一支付违约金",
+      "dispute_resolution": "协商不成的，提交北京仲裁委员会仲裁"
+    }
+  },
+  {
+    "file": "contract_14.txt",
+    "label": {
+      "contract_type": "商品买卖合同",
+      "party_a": "绿洲食品有限公司",
+      "party_b": "远大实业集团",
+      "amount": "140000元",
+      "term_start": "2026-10-10",
+      "term_end": "2026-12-20",
+      "penalty": "延迟交付的，每延迟一日按合同总价的千分之三支付违约金",
+      "dispute_resolution": "协商不成的，提交北京仲裁委员会仲裁"
+    }
+  },
+  {
+    "file": "contract_15.txt",
+    "label": {
+      "contract_type": "技术服务合同",
+      "party_a": "恒信咨询有限公司",
+      "party_b": "华信物流有限公司",
+      "amount": "550000元",
+      "term_start": "2026-11-01",
+      "term_end": "2027-08-28",
+      "penalty": "任一方违约的，应向守约方支付合同总额百分之十的违约金",
+      "dispute_resolution": "协商不成的，向合同签订地人民法院提起诉讼"
+    }
+  },
+  {
+    "file": "contract_16.txt",
+    "label": {
+      "contract_type": "劳动合同",
+      "party_a": "绿洲食品有限公司",
+      "party_b": "张伟",
+      "amount": "13000元/月",
+      "term_start": "2026-12-01",
+      "term_end": "2028-09-28",
+      "penalty": "乙方违反服务期约定的，应支付违约金25000元",
+      "dispute_resolution": "协商不成的，提交北京仲裁委员会仲裁"
+    }
+  },
+  {
+    "file": "contract_17.txt",
+    "label": {
+      "contract_type": "房屋租赁合同",
+      "party_a": "孙婷",
+      "party_b": "孙婷",
+      "amount": "3500元/月",
+      "term_start": "2026-04-01",
+      "term_end": "2027-03-28",
+      "penalty": "逾期支付租金超过十日的，每日按月租金的百分之一支付违约金",
+      "dispute_resolution": "协商不成的，提交北京仲裁委员会仲裁"
+    }
+  },
+  {
+    "file": "contract_18.txt",
+    "label": {
+      "contract_type": "商品买卖合同",
+      "party_a": "远大实业集团",
+      "party_b": "星辰科技有限公司",
+      "amount": "80000元",
+      "term_start": "2026-03-10",
+      "term_end": "2026-11-20",
+      "penalty": "延迟交付的，每延迟一日按合同总价的千分之三支付违约金",
+      "dispute_resolution": "协商不成的，向合同签订地人民法院提起诉讼"
+    }
+  },
+  {
+    "file": "contract_19.txt",
+    "label": {
+      "contract_type": "技术服务合同",
+      "party_a": "启明软件有限公司",
+      "party_b": "远大实业集团",
+      "amount": "540000元",
+      "term_start": "2026-07-01",
+      "term_end": "2027-10-28",
+      "penalty": "任一方违约的，应向守约方支付合同总额百分之十的违约金",
+      "dispute_resolution": "协商不成的，提交北京仲裁委员会仲裁"
+    }
+  },
+  {
+    "file": "contract_20.txt",
+    "label": {
+      "contract_type": "劳动合同",
+      "party_a": "绿洲食品有限公司",
+      "party_b": "李明",
+      "amount": "9000元/月",
+      "term_start": "2026-11-01",
+      "term_end": "2028-09-28",
+      "penalty": "乙方违反服务期约定的，应支付违约金15000元",
+      "dispute_resolution": "协商不成的，提交北京仲裁委员会仲裁"
+    }
+  }
+]
