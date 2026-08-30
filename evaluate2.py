@@ -16,20 +16,31 @@ def loose_sim(a, b):
     return difflib.SequenceMatcher(None, a, b).ratio()
 
 def check(field, pred, gold):
-    if pred is None or str(pred).strip() == "":
+    g = ("" if gold is None else str(gold)).strip()
+    p = ("" if pred is None else str(pred)).strip()
+    if g == "":
+        return (p == ""), "gold_kong"
+    if p == "":
         return False, "kong"
-    if field in ("contract_type", "party_a", "party_b", "term_start", "term_end", "dispute_resolution"):
-        return (str(pred).strip() == str(gold).strip()), "exact"
+    if field in ("contract_type", "party_a", "party_b", "term_start", "term_end"):
+        return (p == g), "exact"
     if field == "amount":
-        return (norm_num(str(pred)) == norm_num(str(gold))), "num"
+        return (norm_num(p) == norm_num(g)), "num"
     if field == "penalty":
-        r = loose_sim(str(pred), str(gold))
+        r = loose_sim(p, g)
         return (r >= 0.5), "sim_" + ("%.2f" % r)
+    if field == "dispute_resolution":
+        if "仲裁" in g:
+            return ("仲裁" in p), "keyword"
+        if "诉讼" in g or "法院" in g:
+            return ("诉讼" in p or "法院" in p), "keyword"
+        return False, "keyword"
     return False, "-"
-
 FIELDS = ["contract_type", "party_a", "party_b", "amount", "term_start", "term_end", "penalty", "dispute_resolution"]
 
 labels = json.load(open("labels.json", encoding="utf-8"))
+print("脚本启动：待评测合同 " + str(len(labels)) + " 份", flush=True)
+
 results = []
 field_pass = {}
 for f in FIELDS:
@@ -39,7 +50,7 @@ extract_fail = 0
 for item in labels:
     fname = item["file"]
     gold = item["label"]
-    print("评测中：" + fname)
+    print("评测中：" + fname, flush=True)
     try:
         text = open(os.path.join("contracts", fname), encoding="utf-8").read()
     except Exception:
@@ -86,4 +97,10 @@ for fname, row, info in results:
         bad = []
         for f in FIELDS:
             if not row[f]:
-                bad
+                bad.append(f)
+        lines.append("| " + fname + " | " + ("PASS 全部8字段" if not bad else "部分错误：" + ",".join(bad)) + " |")
+with open("eval_report2.md", "w", encoding="utf-8") as f:
+    f.write(NL.join(lines))
+print("")
+print("总体字段准确率：%.1f%%" % (100.0 * overall))
+print("报告已写入 eval_report2.md")

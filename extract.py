@@ -12,8 +12,11 @@ NL = chr(10)
 FIELDS = ("contract_type（只能取：劳动合同/房屋租赁合同/商品买卖合同/技术服务合同），"
           "party_a（甲方名称，原样保留），party_b（乙方名称，原样保留），"
           "amount（金额，如：5000元/月 或 100000元），"
-          "term_start（起始日期，格式YYYY-MM-DD），term_end（结束日期，格式YYYY-MM-DD），"
+          "term_start（合同履行期间的起始日期，即交货期/服务期/租期等的开始日，格式YYYY-MM-DD），"
+          "term_end（履行期间的结束日期，格式YYYY-MM-DD）；"
+          "注意：若正文只出现「某年某月某日前」这类单独截止日期而没有明确起止期间，term_start与term_end都填null，"
           "penalty（违约责任条款原文摘要，50字以内），dispute_resolution（争议解决方式：诉讼 或 仲裁）")
+
 
 PROMPT = ("你是合同信息抽取引擎。从下面的合同正文中抽取指定字段。规则：" + NL +
           "1) 只输出一个JSON对象，不要输出任何解释、不要用markdown代码块；" + NL +
@@ -34,15 +37,17 @@ class ContractInfo(BaseModel):
 def extract_once(text):
     r = client.chat.completions.create(model=CHAT_MODEL,
         messages=[{"role": "user", "content": PROMPT + text}],
-        temperature=0.1)
+        temperature=0)
     return r.choices[0].message.content.strip()
 
 def extract(text, max_retry=1):
+    err = "unknown"
     for attempt in range(max_retry + 1):
         raw = extract_once(text)
         raw = raw.replace("```json", "").replace("```", "").strip()
         try:
             data = json.loads(raw)
+            data = {k: ("" if v is None else v) for k, v in data.items()}
             return ContractInfo(**data).model_dump(), None
         except (json.JSONDecodeError, ValidationError, TypeError) as e:
             err = str(e)[:200]

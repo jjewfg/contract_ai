@@ -123,8 +123,8 @@
       "party_a": "天成建设有限公司",
       "party_b": "蓝海贸易有限公司",
       "amount": "240000元",
-      "term_start": "2026-06-10",
-      "term_end": "2026-04-20",
+      "term_start": "",
+      "term_end": "",
       "penalty": "延迟交付的，每延迟一日按合同总价的千分之三支付违约金",
       "dispute_resolution": "协商不成的，提交北京仲裁委员会仲裁"
     }
