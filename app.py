@@ -14,7 +14,6 @@ def run_extract(text):
         return {"error": "抽取失败：" + str(err)}, None
     with open("extraction_result.json", "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
-        print(nl)
     return result, "extraction_result.json"
 
 EXAMPLE = ""
