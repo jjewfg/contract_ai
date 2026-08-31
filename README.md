@@ -29,6 +29,7 @@ pip install -r requirements.txt → 配置环境变量 SILICONFLOW\_API\_KEY →
 docker compose up --build → 浏览器打开 http://127.0.0.1:7860
 
 
+**在线体验**：[魔搭创空间](https://modelscope.cn/studios/xiaoluobolyt/contract-extractor)
 
 \## 已知限制
 
